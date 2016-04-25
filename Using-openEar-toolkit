@@ -1,0 +1,19 @@
+#installation
+
+#unpack in the write permitted directory
+tar -zxvf openEAR-0.1.0.tar.gz
+
+
+cd openEAR-0.1.0/
+
+./autogen.sh
+
+#for some reason it needed twice to overcome errors
+./autogen.sh
+make -j4 ; make
+make install
+
+#extract output in SVM format
+./SMILExtract -C config/emobase.conf -I /projekte/slu/Projects/Hiwis/Mahbub/test/emotion.wav -O /projekte/slu/Projects/Hiwis/Mahbub/test/emotion.wav.arff
+perl arffToLsvm.pl /projekte/slu/Projects/Hiwis/Mahbub/test/emotion.wav.arff output_lsvm_format_file
+
