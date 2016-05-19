@@ -1,0 +1,64 @@
+
+
+#installing openEar-toolkit
+
+#unpack in the write permitted directory
+tar -zxvf openEAR-0.1.0.tar.gz
+
+
+cd openEAR-0.1.0/
+
+./autogen.sh
+
+#for some reason it needed twice to overcome errors
+./autogen.sh
+make -j4 ; make
+make install
+
+#===============================
+
+#extracting features using openEar
+
+: '
+In order to automatically extract features and build a classifier model from these features the emotion corpus must be in a simple, standard format which will be briefly described in the following:
+1. All audio recordings must be available in uncompressed wave format, preferably 16 kHz sampling rate and mono or stereo.
+2. All turns for one emotion class should be in a folder named after the class, e.g. all turns for anger should be in folder anger/, e.g. anger/turn anger1.wav, anger/turn anger2.wav.
+
+I have created a toy corpus here, /mount/projekte15/slu/Projects/Hiwis/Mahbub/test/corpus
+
+
+#Now Batch extraction of features for a whole corpus of emotional speech is done using the perl script scripts/modeltrain/stddirectory smileextract.pl. 
+
+The script takes 3 arguments as follows:
+stddirectory smileextract.pl <corpus base path>
+<opensmile config file (file name only, no path!)>
+<output arff>
+
+'
+
+#going to openEAR/modeltrain directory
+cd /mount/projekte15/slu/Projects/Hiwis/Mahbub/test/openEAR-0.1.0
+
+#Extracting Features
+perl stddirectory_smileextract.pl /mount/projekte15/slu/Projects/Hiwis/Mahbub/test/corpus emobase.conf /projekte/slu/Projects/Hiwis/Mahbub/test/batch_output.arff
+
+#============================================
+
+#SVM Classification using scikit-learn
+
+# from the batch_output.arff file, three categories(anger, fear, sad); each containing one sample are used as #training data 
+# and one different sample from 'sad' was used as test data.
+
+from sklearn import svm
+import numpy as np
+X = np.loadtxt('training_data.txt', delimiter=",")
+X.reshape(1, -1) #if it contains a single sample.
+Y = [0, 1, 2]
+clf = svm.SVC(decision_function_shape='ovo')
+clf.fit(X, Y) 
+test_data = np.loadtxt('test_data.txt' , delimiter=",")
+test_data.reshape(1, -1) #if it contains a single sample.
+clf.predict(test_data)
+
+#============================================================
+
