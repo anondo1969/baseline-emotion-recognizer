@@ -35,7 +35,7 @@ stddirectory smileextract.pl <corpus base path>
 '
 
 #going to openEAR/modeltrain directory
-cd /mount/projekte15/slu/Projects/Hiwis/Mahbub/test/openEAR-0.1.0
+cd /mount/projekte15/slu/Projects/Hiwis/Mahbub/test/openEAR-0.1.0/scripts/modeltrain
 
 #Extracting Features
 perl stddirectory_smileextract.pl /mount/projekte15/slu/Projects/Hiwis/Mahbub/test/corpus emobase.conf /projekte/slu/Projects/Hiwis/Mahbub/test/batch_output.arff
