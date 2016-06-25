@@ -26,10 +26,13 @@ Run the "install_open_smile.sh" script. It will install the openSMILE tool-kit u
 Data Preparation
 =================
 In order to automatically extract features and build a classifier model from these features the emotion corpus you want to use must be in a simple, standard format which will be briefly described in the following:
-	• All audio recordings must be available in uncompressed wave format, preferably 16kHz sampling rate and mono or stereo.
-	• All turns for one emotion class should be in a folder named after the class.
-	• To make the automation process easier in my scripts, I have used a specific file naming convention. It is as follows- 
-		<ClassNumber>_<ClassName>_<FileNumber>
+
+• All audio recordings must be available in uncompressed wave format, preferably 16kHz sampling rate and mono or stereo.
+	
+• All turns for one emotion class should be in a folder named after the class.
+	
+• To make the automation process easier in my scripts, I have used a specific file naming convention. It is as follows- 
+<ClassNumber>_<ClassName>_<FileNumber>
 		
     Example:
     
