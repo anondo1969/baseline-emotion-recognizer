@@ -31,8 +31,9 @@ In order to automatically extract features and build a classifier model from the
 	
 • All turns for one emotion class should be in a folder named after the class.
 	
-• To make the automation process easier in my scripts, I have used a specific file naming convention. It is as follows- 
-<ClassNumber>_<ClassName>_<FileNumber>
+• To make the automation process easier in my scripts, I have used a specific file naming convention. It is as follows-  
+
+    <ClassNumber>_<ClassName>_<FileNumber>
 		
     Example:
     
