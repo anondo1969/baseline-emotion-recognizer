@@ -442,7 +442,7 @@ The set contains 1582 features (same as the INTERSPEECH 2010 Paralinguistic Chal
 Further Reading
 ================
 
-For gaining a deeper knowledge these links are may be helpful,
+For gaining a deeper knowledge these links can be helpful,
 
 1. http://www.audeering.com/research-and-open-source/files/openSMILE-book-latest.pdf
 
