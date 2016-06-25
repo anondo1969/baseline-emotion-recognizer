@@ -136,10 +136,10 @@ The following subsections will give the details idea about different features.
 
 
 ------------------------------------------------------------------------
-The INTERSPEECH 2009 Emotion Challenge feature set The INTERSPEECH 2009
+The INTERSPEECH 2009 Emotion Challenge feature set
 ------------------------------------------------------------------------
 
-Emotion Challenge feature set is represented by the configuration file,
+The INTERSPEECH 2009 Emotion Challenge feature set is represented by the configuration file,
 
     config/emo_IS09.conf
 
