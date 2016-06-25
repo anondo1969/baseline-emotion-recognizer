@@ -16,7 +16,7 @@ http://scikit-learn.org/stable/install.html
 
 Installation
 ===============
-Run the "install_open_smile.sh" script. It will install the openSMILE tool-kit under the current directory. If the download link does not work then please refer to the following download link and install it manually.
+Run the "install_open_smile.sh" script. It will install the openSMILE tool-kit under the current directory. If the download link in the script does not work then please refer to the following download link and install it manually.
  http://audeering.com/research/opensmile/#download
 
     Example:
