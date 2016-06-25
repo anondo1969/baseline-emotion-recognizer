@@ -1,4 +1,3 @@
-
 Baseline Emotion Recognizer
 ===============================
 Written By- Mahbub Ul Alam
@@ -440,7 +439,6 @@ A few tweaks have been made regarding the normalisation of duration and position
 
 The set contains 1582 features (same as the INTERSPEECH 2010 Paralinguistic Challenge set) which result from a base of 34 low-level descriptors (LLD) with 34 corresponding delta coefficients appended, and 21 functionals applied to each of these 68 LLD contours (1428 features). In addition, 19 functionals are applied to the 4 pitch-based LLD and their four delta coefficient contours (152 features). Finally the number of pitch onsets (pseudo syllables) and the total duration of the input are appended (2 features). The only difference to the INTERSPEECH 2010 Paralinguistic Challenge set is the normalisation of the ‘maxPos’ and ‘minPos’ features which are normalised to the segment length in the present set.
 
-================
 Further Reading
 ================
 
