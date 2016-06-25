@@ -2,7 +2,7 @@ Baseline Emotion Recognizer
 ===============================
 Written By- Mahbub Ul Alam
 
-This system recognizes emotion from audio files. It uses openSMILE tool kit to extract the features. For classification it uses SVM machine learning technique. For the classification it uses scikit-learn library.
+This system recognizes emotion from audio data. It uses openSMILE tool kit to extract the features. For classification it uses SVM machine learning technique. For the classification it uses scikit-learn library.
 
 To know about the features please view the "Feature Description" section.
 
